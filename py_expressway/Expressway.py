@@ -1,7 +1,7 @@
 import json
 import requests
 import datetime
-from py_expressway import SearchRule
+from py_expressway import SearchRule, Certificates
 
 from lxml import etree
 
@@ -19,6 +19,7 @@ class Expressway:
 
         self.__session.verify = verify
         self.searchrule = SearchRule.SearchRule(self.__session, self.__address)
+        self.certificates = Certificates.Certificates(self.__session, self.__address)
     
     def __str__(self):
         return json.dumps({

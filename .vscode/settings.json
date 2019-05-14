@@ -12,5 +12,16 @@
   "python.unitTest.unittestEnabled": true,
   "python.unitTest.pyTestArgs": [
     "tests"
-  ]
+  ],
+  "python.formatting.provider": "black",
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./tests",
+    "-p",
+    "Test*.py"
+  ],
+  "python.testing.pyTestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.unittestEnabled": true
 }
